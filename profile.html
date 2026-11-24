@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Profile · CinePass</title><link rel="stylesheet" href="shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>.av{width:120px;height:120px;border-radius:50%;border:3px solid var(--gold);display:grid;place-items:center;font:700 2.4rem Poppins;background:linear-gradient(135deg,var(--mar),#1d0610);color:var(--gold);box-shadow:0 0 40px rgba(214,180,106,.3)}
+.ph-row{display:flex;gap:28px;align-items:center;flex-wrap:wrap}.stat b{display:block;font:700 2rem Poppins;color:var(--gold)}
+.info div{padding:12px 0;border-bottom:1px solid var(--bd)}.info small{display:block;color:var(--mut)}
+.fav{position:relative}.fav h3{font-size:1rem;margin:10px 0 4px}
+.set li{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd)}</style></head>
+<body><main id="main">
+<div id="out" class="wrap" hidden style="padding:120px 0;text-align:center"><h1>You're signed out</h1><p class="muted" style="margin:12px 0 24px">Your saved data stays on this device.</p><button class="btn" id="in">Sign back in (demo)</button></div>
+<div id="app">
+<section class="hero"><div class="wrap ph-row"><div class="av" id="av" aria-hidden="true"></div><div>
+<p class="eyebrow">Member since <span id="since"></span></p><h1 id="hn" class="gold"></h1><p class="muted" id="he" style="margin:6px 0 14px"></p>
+<span class="pill" id="hm"></span> <button class="btn sm" id="edit">Edit Profile</button></div></div></section>
+<section><div class="wrap"><h2>Your dashboard</h2><div class="grid" id="stats"></div></div></section>
+<section style="padding-top:0"><div class="wrap grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div class="card rv"><h2 style="font-size:1.3rem">Profile information</h2><div class="info" id="info"></div></div>
+<div class="card rv set"><h2 style="font-size:1.3rem">Account settings</h2><ul style="padding:0">
+<li>Personal information <button class="btn ghost sm" data-o="edit">Edit</button></li>
+<li>Password <button class="btn ghost sm" data-o="pw">Change</button></li>
+<li><label style="margin:0;color:var(--tx)" for="n1">Booking reminders</label><input type="checkbox" id="n1" data-n="remind"></li>
+<li><label style="margin:0;color:var(--tx)" for="n2">Offer alerts</label><input type="checkbox" id="n2" data-n="offers"></li>
+<li>Appearance <button class="btn ghost sm" id="th">Toggle light/dark</button></li>
+<li>Session <button class="btn ghost sm" id="lo">Log out</button></li></ul></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>Favourite movies</h2><div class="grid" id="favs" style="grid-template-columns:repeat(auto-fill,minmax(190px,1fr))"></div>
+<h2 style="margin-top:48px;font-size:1.3rem">Add more favourites</h2><div class="grid" id="more" style="grid-template-columns:repeat(auto-fill,minmax(190px,1fr))"></div></div></section></div></main>
+<div class="modal" id="m-edit" role="dialog" aria-modal="true" aria-labelledby="t1"><div class="box"><button class="x" aria-label="Close" data-c="m-edit">×</button><h2 id="t1">Edit profile</h2>
+<form id="f" novalidate><label for="fn">Full name</label><input id="fn"><div class="err" data-e="fn"></div><label for="fe">Email</label><input id="fe" type="email"><div class="err" data-e="fe"></div>
+<label for="fp">Phone (e.g. 03001234567)</label><input id="fp" type="tel"><div class="err" data-e="fp"></div><label for="fc">City</label><input id="fc"><div class="err" data-e="fc"></div>
+<label for="fm">Membership</label><select id="fm"><option>Silver</option><option>Gold</option><option>Platinum</option></select><br><br><button class="btn" type="submit">Save changes</button></form></div></div>
+<div class="modal" id="m-pw" role="dialog" aria-modal="true" aria-labelledby="t2"><div class="box"><button class="x" aria-label="Close" data-c="m-pw">×</button><h2 id="t2">Change password</h2><p class="muted">Simulated — nothing is stored.</p>
+<form id="pf" novalidate><label for="p1">Current password</label><input id="p1" type="password"><label for="p2">New password (min 8 chars)</label><input id="p2" type="password"><label for="p3">Confirm new password</label><input id="p3" type="password"><div class="err" id="pe"></div><br><button class="btn" type="submit">Update password</button></form></div></div>
+<script src="shared.js"></script><script src="profile.js"></script></body></html>

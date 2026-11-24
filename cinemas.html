@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cinemas · CinePass</title><link rel="stylesheet" href="shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>.bar{display:grid;gap:12px;grid-template-columns:2fr 1fr 1fr auto;max-width:900px}.bar label{margin:0 0 4px}
+@media(max-width:760px){.bar{grid-template-columns:1fr}}
+.cc .ph{transition:.5s}.cc:hover .ph{transform:scale(1.04)}.cc .im{overflow:hidden;border-radius:16px;margin-bottom:14px}
+.cc h3{margin-bottom:2px}.gal{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.gal .ph{aspect-ratio:4/3;transition:.5s;cursor:default}.gal .ph:hover{transform:scale(1.03);filter:brightness(1.2)}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.dl div{background:rgba(127,127,127,.1);padding:10px 14px;border-radius:12px;font-size:.9rem}.dl small{display:block;color:var(--mut)}
+@media(max-width:480px){.dl{grid-template-columns:1fr}}</style></head>
+<body><main id="main">
+<section class="hero"><div class="wrap"><p class="eyebrow">Locations</p><h1 class="gold">Discover Your<br>Perfect Cinema.</h1>
+<p class="muted">Find extraordinary movie experiences at CinePass cinema locations.</p>
+<form class="bar" id="bar" role="search" onsubmit="return false"><div><label for="q">Search name or city</label><input id="q" type="search" placeholder="e.g. Nueplex or Lahore"></div>
+<div><label for="city">City</label><select id="city"></select></div><div><label for="fac">Facility</label><select id="fac"></select></div><div style="align-self:end"><button class="btn ghost" id="clr" type="button">Clear filters</button></div></form></div></section>
+<section><div class="wrap"><h2>Cinema locations <span class="muted" style="font-size:1rem" id="cnt"></span></h2><p class="muted" style="margin:-12px 0 22px">Demonstration listings only — not official CinePass booking partners. Confirm details with each cinema.</p><div class="grid" id="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>Gallery</h2><div class="gal" id="gal"></div></div></section></main>
+<div class="modal" id="md" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box"><button class="x" aria-label="Close" data-c>×</button><div id="mb"></div></div></div>
+<script src="shared.js"></script><script src="cinemas.js"></script></body></html>

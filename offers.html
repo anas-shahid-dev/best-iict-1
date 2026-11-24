@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offers &amp; Discounts · CinePass</title><link rel="stylesheet" href="shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>.big{font:700 3rem Poppins;color:var(--gold)}.of{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:8px}
+.of::before{content:"";position:absolute;right:-60px;top:-60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(var(--mar),transparent 70%)}
+.code{font:600 .95rem monospace;letter-spacing:.12em;padding:6px 12px;border:1px dashed var(--gold);border-radius:10px;color:var(--gold);align-self:flex-start}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.tabs button[aria-pressed=true]{background:var(--gold);color:#171717}
+.tag{position:absolute;right:16px;top:16px;font-size:.7rem;color:var(--mut)}
+.calc{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));align-items:end}
+.res{margin-top:20px;font-size:1.05rem}.res b{color:var(--gold)}.ban{height:64px;border-radius:18px;background:linear-gradient(110deg,var(--mar),#1d0610,var(--mar));background-size:200%;animation:sh 8s linear infinite;display:grid;place-items:center;color:var(--gold);letter-spacing:.2em;font-size:.8rem;margin-top:36px;border:1px solid var(--bd)}</style></head>
+<body><main id="main">
+<section class="hero"><div class="wrap"><p class="eyebrow">CinePass Rewards</p><h1 class="gold">Exclusive Experiences.<br>Extraordinary Savings.</h1>
+<p class="muted">Unlock premium movie experiences with exclusive CinePass rewards and special offers.</p><a class="btn" href="#offers">Explore Offers</a>
+<div class="ban">DEMONSTRATION OFFERS · NOT REAL DISCOUNTS</div></div></section>
+<section id="offers"><div class="wrap"><h2>Featured offers</h2><div class="tabs" id="tabs" role="group" aria-label="Offer categories"></div><div class="grid" id="grid"></div></div></section>
+<section id="coupon" style="padding-top:0"><div class="wrap"><div class="card"><h2 style="font-size:1.4rem">Coupon checker</h2><p class="muted">Enter a demo order total and a promo code. No payment is processed.</p>
+<form class="calc" id="cf" novalidate><div><label for="amt">Order total (PKR)</label><input id="amt" type="number" min="1" step="1" value="3000"></div><div><label for="cc">Promo code</label><input id="cc" autocomplete="off" placeholder="e.g. CINE10"></div><button class="btn" type="submit">Apply coupon</button></form>
+<div class="res" id="res" role="status" aria-live="polite"></div></div></div></section></main>
+<script src="shared.js"></script><script src="offers.js"></script></body></html>
